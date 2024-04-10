@@ -5,8 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-API_KEY = "AIzaSyCuJPcMBd_jv5jTdFFW_nCHMujy8VxlJkk"
-SEARCH_ENGINE_ID = "21f8592ba5377435a"
+API_KEY = ""
+SEARCH_ENGINE_ID = ""
 
 def build_payload(query, start=1, num=10, **params):
     payload = {
