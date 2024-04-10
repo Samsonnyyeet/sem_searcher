@@ -1,0 +1,198 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Python Web App</title>
+    <style>
+        .unique-links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input Form</h1>
+    <form id="inputForm">
+        <input type="text" id="userInput" placeholder="Enter something">
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Output:</h2>
+    <div id="output"></div>
+
+    <div class="unique-links">
+        <h2>Unique Links:</h2>
+        <ul id="uniqueLinksList"></ul>
+    </div>
+
+    <script>
+        // Get the form and output div
+        var inputForm = document.getElementById('inputForm');
+        var userInput = document.getElementById('userInput');
+        var outputDiv = document.getElementById('output');
+        var uniqueLinksList = document.getElementById('uniqueLinksList');
+
+        // Event listener for form submission
+        inputForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Make an asynchronous POST request to Flask endpoint
+            fetch('/process', {
+                method: 'POST',
+                body: JSON.stringify({ user_input: userInput.value }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the output div with the response
+                outputDiv.textContent = data.output;
+
+                // Update the unique links list with the JSON response
+                var uniqueLinks = data.unique_links;
+                uniqueLinksList.innerHTML = '';
+                uniqueLinks.forEach(function(link) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = link;
+                    uniqueLinksList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        #inputForm {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            width: 80%;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #output {
+            margin-bottom: 20px;
+        }
+
+        .unique-links {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .unique-links h2 {
+            margin-bottom: 10px;
+        }
+
+        .unique-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .unique-links li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Web App</h1>
+        <form id="inputForm">
+            <input type="text" id="userInput" placeholder="Enter something">
+            <input type="submit" value="Submit">
+        </form>
+        <div id="output"></div>
+        <div class="unique-links">
+            <h2>Unique Links:</h2>
+            <ul id="uniqueLinksList"></ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code remains the same
+        // Get the form and output div
+        var inputForm = document.getElementById('inputForm');
+        var userInput = document.getElementById('userInput');
+        var outputDiv = document.getElementById('output');
+        var uniqueLinksList = document.getElementById('uniqueLinksList');
+
+        // Event listener for form submission
+        inputForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Make an asynchronous POST request to Flask endpoint
+            fetch('/process', {
+                method: 'POST',
+                body: JSON.stringify({ user_input: userInput.value }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the output div with the response
+                outputDiv.textContent = data.output;
+
+                // Update the unique links list with the JSON response
+                var uniqueLinks = data.unique_links;
+                uniqueLinksList.innerHTML = '';
+                uniqueLinks.forEach(function(link) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = link;
+                    uniqueLinksList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

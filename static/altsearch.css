@@ -1,0 +1,153 @@
+*{
+  margin:0;
+  padding:0;
+  font-family:'poppins',sans-serif;
+  box-sizing:border-box;
+}
+input[type="text"] {
+    font-size: 20px; /* Adjust the font size as needed */
+    width: 300px;   /* Adjust the width as needed */
+    padding: 10px;  /* Adjust the padding as needed for better appearance */
+}
+
+.hero
+{
+  background-color:black;
+  min-height: 100vh;
+  width: 100%;
+  position:relative;
+}
+.mennnu
+{
+  width:10px;
+  margin-right:40px;
+  cursor:pointer;
+}
+nav ul
+{
+  flex:1;
+  text-align:right;
+}
+nav ul li
+{
+  display:inline-block;
+  list-style:none;
+  margin: 80 20px;
+  margin-right: 40px;
+}
+nav ul li a
+{
+  text-decoration: none;
+  color:white;
+}
+.lamp-container
+{
+  position: absolute;
+  top:-20px;
+  left:45%;
+}
+p.su
+{
+  font-size: 60px;
+  margin-top:-190px;
+  margin-left:550px;
+}
+.logo
+{
+  position: absolute;
+  top: 40px;
+  width:250px;
+}
+.lamp
+{
+  width: 150px;
+}
+
+.container{
+  padding-top:150px;
+  padding-left:450px;
+  text-align:center;
+  z-index:5;
+}
+.search-bar
+{
+  max-width:700%;
+  width: 600px;
+  background: rgba(255, 255, 255, 0.907);
+  display:flex;
+  align-items: center;
+  justify-content: center ;
+  margin-top:22%;
+  border-radius: 60px;
+  padding: 10px 20px;
+  text-align: center;
+  /* margin-left:33%; */
+  opacity:1;
+  transition:0.6s;
+}
+.lighty
+{
+  position:absolute;
+  top:98%;
+  left:46%;
+  transform:translateX(-50%);
+  width: 500px;
+  opacity:1;
+}
+.search-bar:hover+.lighty{
+  position:absolute;
+  top:98%;
+  left:46%;
+  width: 500px;
+  opacity:0;
+}
+.search-bar:hover{
+  opacity:1;
+}
+
+
+.search-bar input
+{
+  background: transparent;
+  flex:1;
+  border:0;
+  outline: none;
+  padding:24px 20px;
+  font-size:20px;
+  color:black;
+}
+::placeholder
+{
+  color:#cac7ff;
+}
+.search-bar button img
+{
+    width:35px;
+}
+.search-bar button 
+{
+    border:0;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    background:white;
+    cursor: pointer;
+}
+.links_container
+{
+  background-color: black;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+.links_container a
+{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-family:'Times New Roman', Times, serif;
+}
+.links_container a:hover
+{
+  color:yellow;
+}

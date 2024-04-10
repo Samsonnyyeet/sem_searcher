@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin>
+    </script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='altsearch.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="{{ url_for('static', filename='images/menu.png') }}" class="mennnu">
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Modern</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lamp-container">
+        <img src="{{ url_for('static', filename='images/lamp.png') }}" class="lamp">
+        <img src="{{ url_for('static', filename='images/light.png') }}" class="lighty">
+      </div>
+      <div class="container">
+        <form class="search-bar" action="/process" method="post">
+          <input type="text" class="sb1" placeholder="search anything" name="user_input">
+          <button type="submit"><img src="{{ url_for('static', filename='images/search.png') }}"></button>
+        </form>
+      </div>
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/AS.jpg') }}" >
+      </div>
+      <p class="su"><span style="color: burlywood;">Alternate </span> <span style="color:white">Search</span></p>
+
+    </div>
+    
+  <div class="links_container">
+      <a href = {{output1}}>{{output1}}</a><br>
+      <a href = {{output2}}>{{output2}}</a><br>
+      <a href = {{output3}}>{{output3}}</a><br>
+      <a href = {{output4}}>{{output4}}</a><br>
+      <a href = {{output5}}>{{output5}}</a><br>
+  </div>
+  </body>
+</html>
