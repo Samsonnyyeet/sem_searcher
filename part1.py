@@ -5,8 +5,8 @@ import pandas as pd
 import urllib.request
 import requests
 
-API_KEY = "AIzaSyBGLlrBYgcjKSzGX49YXJC989o-sy70A4o" # "AIzaSyCuJPcMBd_jv5jTdFFW_nCHMujy8VxlJkk"
-SEARCH_ENGINE_ID =  "b43ce17a2e4ec4c98"# "21f8592ba5377435a"
+API_KEY = ""
+SEARCH_ENGINE_ID = ""
 
 def build_payload(query, start=1, num=10, **params):
     payload = {
