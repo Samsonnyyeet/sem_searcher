@@ -30,7 +30,7 @@ def process():
     get_dataset(query, results, rlinks)
 
     model_name = "embed-english-v3.0"
-    api_key = "z6i4MGSuIacsbKxjHgRDfzshQHCafyFUJafnOYja"
+    api_key = ""
     input_type_embed = "search_document"
 
     co = cohere.Client(api_key)
