@@ -25,7 +25,7 @@ def process():
     get_dataset(query, 80, results, rlinks)
 
     model_name = "embed-english-v3.0"
-    api_key = "2gtPSdrP4OQqJppvccnSVAb7n92eQO65qO25bKUr"
+    api_key = ""
     input_type_embed = "search_document"
 
     co = cohere.Client(api_key)
